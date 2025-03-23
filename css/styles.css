@@ -4,6 +4,7 @@
   --clr-light: #f1f5f9;
   --clr-slate: #94a3b8;
   --clr-primary: #ff69b4;
+  --clr-attribution: #3e52a3;
 
   /* Pixel Sizes: */
   --4px: 0.25rem /* 4px */;
@@ -88,6 +89,10 @@ h1 {
   color: var(--clr-slate);
 }
 
+h2::before {
+  content: "PERFUME";
+  display: block;
+}
 /* 
 ********************************
 FOOTER:
@@ -98,28 +103,24 @@ FOOTER:
 .attribution {
   text-align: center;
   font-size: var(--12px);
-  color: var(--clr-dark);
+  color: var(--clr-attribution);
   margin-bottom: var(--sp-24px);
 }
 
 /* LINKS */
 /* Default State */
 .attribution a:link {
-  color: var(--clr-dark);
+  color: var(--clr-attribution);
   text-decoration: none;
 }
 
 /* Visited State */
 .attribution a:visited {
-  color: var(--clr-dark);
+  color: var(--clr-attribution);
 }
 
-/* State On Hover */
-.attribution a:hover {
-  opacity: 75%;
-}
-
-/* State Whilst Being Clicked */
+/* State On Hover / Whilst being clicked */
+.attribution a:hover,
 .attribution a:active {
-  /* color: var(--clr-slate); */
+  opacity: 75%;
 }
