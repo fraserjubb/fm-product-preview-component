@@ -197,7 +197,7 @@ FOOTER:
   text-align: center;
   font-size: var(--12px);
   color: var(--clr-attribution);
-  margin-bottom: var(--sp-24px);
+  margin-bottom: var(--24px);
 }
 
 /* LINKS */
