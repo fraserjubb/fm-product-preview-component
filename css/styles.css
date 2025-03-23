@@ -1,25 +1,30 @@
 :root {
   /* Colors: */
-  --clr-dark: #020717;
+  --clr-black: #1c232b;
+  --clr-grey: #6c7289;
+  --clr-cream: #f2ebe3;
   --clr-light: #f1f5f9;
   --clr-slate: #94a3b8;
-  --clr-primary: #ff69b4;
+  --clr-primary-500: hsl(158, 36%, 37%);
+  --clr-primary-700: hsl(158, 42%, 18%);
   --clr-attribution: #3e52a3;
 
   /* Pixel Sizes: */
   --4px: 0.25rem /* 4px */;
+  --5px: 0.3125rem /* 5px */;
   --8px: 0.5rem /* 8px */;
   --10px: 0.625rem /* 10px */;
+  --12px: 0.75rem /* 12px */;
+  --13px: 0.8125rem /* 13px */;
   --14px: 0.875rem /* 14px */;
   --16px: 1rem; /* 16px */
   --18px: 1.125rem /* 18px */;
   --20px: 1.25rem /* 20px */;
   --24px: 1.5rem /* 24px */;
+  --32px: 2rem;
 
   /* Specific Element Font Sizes */
-  --fs-h1: 2.25rem /* 36px */;
   --fs-h2: 2rem /* 32px */;
-  --fs-h3: 1.75rem /* 28px */;
 }
 
 /* 
@@ -28,12 +33,23 @@ SELF-HOSTING FONT:
 ********************************
 */
 
-/* VARIABLE FONT: */
+/* VARIABLE FONTS: */
 @font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/Inter-VariableFont_opsz\,wght.woff2")
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.woff2")
     format("woff2 supports variations");
-  src: url("/assets/fonts/Inter-VariableFont_opsz\,wght.woff2")
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.woff2")
+    format("woff2-variations");
+  font-weight: 100 900; /*Check values*/
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.woff2")
+    format("woff2 supports variations");
+  src: url("/assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.woff2")
     format("woff2-variations");
   font-weight: 100 900; /*Check values*/
   font-style: normal;
@@ -59,14 +75,14 @@ GLOBAL CSS VALUES:
 }
 
 body {
-  font-family: "Inter", sans-serif; /* Or serif*/
-  font-size: var(--16px);
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--14px);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0;
 
-  background-color: hotpink;
-  /* color: ; */
+  background-color: var(--clr-cream);
+  color: var(--clr-grey);
 }
 
 img,
@@ -83,16 +99,93 @@ svg {
 MAIN:
 ********************************
 */
-h1 {
-  font-size: var(--fs-h1);
-  text-align: center;
-  color: var(--clr-slate);
+.container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
-h2::before {
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+  border-radius: var(--8px);
+}
+
+.card__image {
+  width: 50%;
+  border-top-left-radius: var(--8px);
+  border-bottom-left-radius: var(--8px);
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: var(--24px);
+}
+
+.card__title,
+.card__price-sale {
+  font-family: "Fraunces", sans-serif;
+  font-size: var(--32px);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.card__title {
+  color: var(--clr-black);
+}
+
+.card__tag {
+  order: -1;
+  text-transform: uppercase;
+  font-size: var(--12px);
+  letter-spacing: var(--5px);
+}
+
+.card__description {
+  margin-bottom: var(--8px);
+  line-height: 1.6;
+}
+
+.card__prices-container {
+  margin-bottom: var(--8px);
+  display: flex;
+  align-items: center;
+  gap: var(--16px);
+}
+.card__price-sale {
+  color: var(--clr-primary-500);
+}
+.card__price-retail {
+  font-size: var(--13px);
+}
+.card__btn {
+  background-color: var(--clr-primary-500);
+  height: 50px;
+  border-radius: var(--8px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1.1;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.card__btn:hover {
+  cursor: pointer;
+  background-color: var(--clr-primary-700);
+}
+
+/* h2::before {
   content: "PERFUME";
   display: block;
-}
+} */
 /* 
 ********************************
 FOOTER:
