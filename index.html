@@ -17,7 +17,11 @@
     <main class="container">
       <section class="card">
         <picture>
+          <source media="(max-width:650px)" srcset="/assets/images/image-product-mobile.webp" type="image/webp" />
+          <source media="(max-width:650px)" srcset="/assets/images/image-product-mobile.avif" type="image/avif" />
           <source media="(max-width:650px)" srcset="/assets/images/image-product-mobile.jpg" type="image/jpg" />
+          <source srcset="/assets/images/image-product-desktop.webp" type="image/webp" />
+          <source srcset="assets/images/image-product-desktop.avif" type="image/avif" />
           <img class="card__image" src="assets/images/image-product-desktop.jpg" alt="Photo of perfume" />
         </picture>
         <div class="card-right">
