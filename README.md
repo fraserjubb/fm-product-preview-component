@@ -1,6 +1,6 @@
 # FM - <Challenge Name> Solution - Fraser Jubb
 
-This is a solution to the [<name> challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/<link>).
+This is a solution to the [<name> challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa).
 
 ## 📖 Table of contents
 
@@ -10,7 +10,6 @@ This is a solution to the [<name> challenge on Frontend Mentor](https://www.fron
 - [My Process](#my-process)
   - [Built With](#built-with)
   - [What I Learned](#what-i-learned)
-  - [Continued Development](#continued-development)
   - [Useful Resources](#useful-resources)
 - [Noteworthy Updates Since Initial Submission](#noteworthy-updates-since-initial-submission)
 - [Connect With Me](#connect-with-me)
@@ -19,12 +18,12 @@ This is a solution to the [<name> challenge on Frontend Mentor](https://www.fron
 
 ### Project Screenshot
 
-![Screenshot of solution](/assets/img/solution-fraser.png)
+![Screenshot of solution](/assets/images/solution-fraser.png)
 
 ### Project Links
 
-- Solution URL: [Click Here](https://www.frontendmentor.io/solutions/blog-preview-card-solution---challenge-2-hEXohJX2cz)
-- Live Site URL: [Click Here](https://fm-blogpreviewcard-fraser.netlify.app/)
+- Solution URL: [Click Here](https://www.frontendmentor.io/solutions/product-preview-component-solution---challenge-5-NeykT__5OR)
+- Live Site URL: [Click Here](https://fm-productpreviewcomponent-fraser.netlify.app/)
 - Frontend Mentor Profile: [@fraserjubb](https://www.frontendmentor.io/profile/fraserjubb)
 
 ## My Process
@@ -39,22 +38,43 @@ This is a solution to the [<name> challenge on Frontend Mentor](https://www.fron
 
 In this particular project:
 
-1.
+1. I now have a much better understanding of the `<picture>` element and how it can be used to swap images on smaller devices.
 
-```css
-<Code proud of>
+```html
+<picture>
+  <source
+    media="(max-width:650px)"
+    srcset="/assets/images/image-product-mobile.webp"
+    type="image/webp"
+  />
+  <source
+    media="(max-width:650px)"
+    srcset="/assets/images/image-product-mobile.avif"
+    type="image/avif"
+  />
+  <source
+    media="(max-width:650px)"
+    srcset="/assets/images/image-product-mobile.jpg"
+    type="image/jpg"
+  />
+  <source
+    srcset="/assets/images/image-product-desktop.webp"
+    type="image/webp"
+  />
+  <source srcset="assets/images/image-product-desktop.avif" type="image/avif" />
+  <img
+    class="card__image"
+    src="assets/images/image-product-desktop.jpg"
+    alt="Photo of perfume"
+  />
+</picture>
 ```
 
-### Continued Development
-
-After submitting this project, I wish to develop the following:
-
-1. <text>
+2. I made better use of the style-guide.md file and even updated it for my own quick reference note that I made from analyzing the Figma file.
 
 ### Useful Resources
 
 - Nothing of note used for this project.
-- [<Text to appear> (<Media Type>)](link) - <description of how it helped>
 
 ## Noteworthy Updates Since Initial Submission
 
@@ -70,4 +90,3 @@ After submitting this project, I wish to develop the following:
 <a href="mailto:fraserjubb.dev@gmail.com"><img height="30px" align="left" alt="Gmail" style="padding-right:10px" title="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=plastic&logo=gmail&logoColor=white"/></a>
 
 <br/>
-# fm-product-preview-component
