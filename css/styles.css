@@ -10,21 +10,18 @@
   --clr-attribution: #3e52a3;
 
   /* Pixel Sizes: */
-  --4px: 0.25rem /* 4px */;
-  --5px: 0.3125rem /* 5px */;
-  --8px: 0.5rem /* 8px */;
-  --10px: 0.625rem /* 10px */;
-  --12px: 0.75rem /* 12px */;
-  --13px: 0.8125rem /* 13px */;
-  --14px: 0.875rem /* 14px */;
-  --16px: 1rem; /* 16px */
-  --18px: 1.125rem /* 18px */;
-  --20px: 1.25rem /* 20px */;
-  --24px: 1.5rem /* 24px */;
+  --4px: 0.25rem;
+  --5px: 0.3125rem;
+  --8px: 0.5rem;
+  --10px: 0.625rem;
+  --12px: 0.75rem;
+  --13px: 0.8125rem;
+  --14px: 0.875rem;
+  --16px: 1rem;
+  --18px: 1.125rem;
+  --20px: 1.25rem;
+  --24px: 1.5rem;
   --32px: 2rem;
-
-  /* Specific Element Font Sizes */
-  --fs-h2: 2rem /* 32px */;
 }
 
 /* 
@@ -105,8 +102,9 @@ MAIN:
   height: 100vh;
 }
 
+/* Card Layout */
 .card {
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 0 auto;
   display: flex;
   background-color: white;
@@ -116,10 +114,8 @@ MAIN:
 
 .card__image {
   flex: 1;
-  width: 300px;
+  width: 18.75rem;
   height: 100%;
-  /* border-top-left-radius: var(--8px); */
-  /* border-bottom-left-radius: var(--8px); */
 }
 
 .card-right {
@@ -130,6 +126,7 @@ MAIN:
   gap: var(--24px);
 }
 
+/* Card Text */
 .card__title,
 .card__price-sale {
   font-family: "Fraunces", sans-serif;
@@ -154,6 +151,7 @@ MAIN:
   line-height: 1.6;
 }
 
+/* Prices: */
 .card__prices-container {
   margin-bottom: var(--8px);
   display: flex;
@@ -166,6 +164,8 @@ MAIN:
 .card__price-retail {
   font-size: var(--13px);
 }
+
+/* Button */
 .card__btn {
   background-color: var(--clr-primary-500);
   height: 50px;
@@ -187,17 +187,12 @@ MAIN:
   background-color: var(--clr-primary-700);
 }
 
-/* h2::before {
-  content: "PERFUME";
-  display: block;
-} */
 /* 
 ********************************
 FOOTER:
 ********************************
 */
 
-/*UPDATE VALUES!*/
 .attribution {
   text-align: center;
   font-size: var(--12px);

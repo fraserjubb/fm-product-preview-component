@@ -1,12 +1,10 @@
 @media (max-width: 650px) {
   .card {
-    max-width: 350px;
+    max-width: 21.88rem;
     flex-direction: column;
   }
 
   .card__image {
     width: 100%;
-    /* border-top-right-radius: var(--8px); */
-    /* border-bottom-left-radius: 0; */
   }
 }
